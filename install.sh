@@ -43,18 +43,23 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 echo Openning neovim for install plug-vim
 
-echo "\" Call the versioned .vimrc file
-if filereadable(expand(\"~/.vim/config/.vimrc\"))
+echo '
+" Call the versioned .vimrc file
+if filereadable(expand("~/.vim/config/.vimrc"))
 	source ~/.vim/config/.vimrc
 endif
-" > ~/.vimrc
+' > ~/.vimrc
 
 echo Configuration installed
 echo Installing Coc.nvim
 . ~/.vim/coc-install.sh
 
-echo 'alias v="nvim"' >> ~/.bashrc
-source ~/.bashrc
+
+if [ ! -x "$(grep -iRl "alias v" ~/.bashrc)" ]; then
+  echo 'Adding alias v => .bashrc for nvim'
+  echo 'alias v="nvim"' >> ~/.bashrc
+  source ~/.bashrc
+fi
 
 echo Install Plugins
 nvim --headless +PlugInstall +qall
