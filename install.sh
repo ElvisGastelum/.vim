@@ -49,7 +49,7 @@ echo Installing Coc.nvim
 
 echo 'alias v="nvim"' >> ~/.bashrc
 source ~/.bashrc
-if [ ! -x "$(command -v zsh)" ]; then
+if [ -x "$(command -v zsh)" ]; then
   echo 'alias v="nvim"' >> ~/.zshrc
 fi
 
