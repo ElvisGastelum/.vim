@@ -52,4 +52,4 @@ echo 'alias v="nvim"' >> ~/.bashrc
 source ~/.bashrc
 
 echo Install Plugins
-nvim +PlugInstall
+nvim +PlugInstall +qall   
