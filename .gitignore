@@ -1,5 +1,6 @@
-**/*
+*
 !.gitignore
 !config
 !install.sh
 !coc-install.sh
+!config/*
