@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+git clone https://github.com/ElvisGastelum/.vim ~/.vim
+
+cd ~/.vim
+
 # Install vim
 if [ ! -x "$(command -v vim)" ]; then
   echo Installing vim
