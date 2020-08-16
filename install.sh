@@ -26,7 +26,7 @@ echo "\" Call the versioned .vimrc file
 if filereadable(expand(\"~/.vim/config/.vimrc\"))
 	source ~/.vim/config/.vimrc
 endif
-" >> ~/.vimrc
+" > ~/.vimrc
 
 echo Configuration installed
 echo Installing Coc.nvim
