@@ -4,14 +4,14 @@
 if [ ! -x "$(command -v vim)" ]; then
   echo Installing vim
   sudo apt update
-  sudo apt install vim 
+  sudo apt install vim -y
 fi
 
 # Install neovim
 if [ ! -x "$(command -v nvim)" ]; then
   echo Installing neovim
   sudo apt update
-  sudo apt install neovim
+  sudo apt install neovim -y
 fi
 
 echo Setting up neovim
