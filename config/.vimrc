@@ -11,7 +11,8 @@ set sw=2
 set relativenumber
 set laststatus=2
 set noshowmode
-
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors
 
 " Call the .vimrc.plug file
 if filereadable(expand("~/.vim/config/.vimrc.plug"))

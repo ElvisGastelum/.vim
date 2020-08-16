@@ -29,6 +29,8 @@ set signcolumn=yes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'jsformatter'
 
 " Syntax for javascript projects
 Plug 'pangloss/vim-javascript'
@@ -55,8 +57,7 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 if has#colorscheme('gruvbox')
-  colorscheme gruvbox
-  let g:gruvbox_contrast_dark = 'hard'
+  source ~/.vim/config/gruvbox.vim
 endif
 
 let mapleader=' '
@@ -66,6 +67,9 @@ nmap <Leader>nt :NERDTreeToggle<CR>
 nmap <Leader>w :w<CR>
 nmap <Leader>qq :q!<CR>
 nmap <Leader>wq :wq<CR>
+nmap <C-t> :tabnew<CR>
+nmap <C-n> :tabnext<CR>
+nmap <C-m> :tabprevious<CR>
 
 nmap <leader>do <Plug>(coc-codeaction)
 nmap <leader>rn <Plug>(coc-rename)
