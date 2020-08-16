@@ -1,0 +1,75 @@
+call plug#begin('~/.vim/plugged')
+
+" Fugitive Vim Github Wrapper
+Plug 'tpope/vim-fugitive'
+
+" Easymotion
+Plug 'easymotion/vim-easymotion'
+
+" NERDTree
+Plug 'scrooloose/nerdtree'
+
+" Vim Tmux
+Plug 'christoomey/vim-tmux-navigator'
+
+" TypeScript Syntax Highlighting
+Plug 'HerringtonDarkholme/yats.vim'
+
+" Intellisense for TypeScript
+Plug 'neoclide/coc.nvim'
+
+" Git Integration for NerdTree
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Git Gutter
+Plug 'airblade/vim-gitgutter'
+set signcolumn=yes
+
+" Status Bar using Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_powerline_fonts = 1
+
+" Syntax for javascript projects
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'jparise/vim-graphql'
+
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+" Fuzzy File Search
+Plug 'ctrlpvim/ctrlp.vim'
+
+" AutoSave
+Plug '907th/vim-auto-save'
+
+let g:auto_save = 1  " enable AutoSave on Vim startup
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
+
+
+" Themes
+Plug 'morhetz/gruvbox'
+
+
+call plug#end()
+
+
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+
+let mapleader=' '
+
+nmap <Leader>fs <Plug>(easymotion-s2)
+nmap <Leader>nt :NERDTreeToggle<CR>
+nmap <Leader>w :w<CR>
+nmap <Leader>qq :q!<CR>
+nmap <Leader>wq :wq<CR>
+
+nmap <leader>do <Plug>(coc-codeaction)
+nmap <leader>rn <Plug>(coc-rename)
+nmap <F2> <Plug>(coc-rename)
+
+
