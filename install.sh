@@ -44,9 +44,6 @@ if filereadable(expand(\"~/.vim/config/.vimrc\"))
 endif
 " > ~/.vimrc
 
-echo Install Plugins
-nvim +PlugInstall +qall
-
 echo Configuration installed
 echo Installing Coc.nvim
 . ~/.vim/coc-install.sh
@@ -58,5 +55,5 @@ if [ -x "$(command -v zsh)" ]; then
   . ~/.zshrc
 fi
 
-echo Openning neovim
-nvim
+echo Install Plugins
+nvim +PlugInstall
