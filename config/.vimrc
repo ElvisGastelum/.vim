@@ -14,8 +14,8 @@ set noshowmode
 
 
 " Call the .vimrc.plug file
-if filereadable(expand("~/.vimrc.plug"))
-	source ~/.vimrc.plug
+if filereadable(expand("~/.vim/config/.vimrc.plug"))
+	source ~/.vim/config/.vimrc.plug
 endif
 
 

@@ -42,7 +42,7 @@ endif
 " > ~/.vimrc
 
 echo Install Plugins
-vim +'PlugInstall --sync' +qa
+nvim +PlugInstall +qall
 
 echo Configuration installed
 echo Installing Coc.nvim
