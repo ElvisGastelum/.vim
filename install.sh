@@ -53,3 +53,4 @@ source ~/.bashrc
 
 echo Install Plugins
 nvim --headless +PlugInstall +qall
+nvim

@@ -6,3 +6,4 @@
 !config/*
 !autoload
 !autoload/has.vim
+!README.md
