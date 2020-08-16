@@ -10,7 +10,7 @@ fi
 # Install neovim
 if [ ! -x "$(command -v nvim)" ]; then
   echo Installing neovim
-  sudo add-apt-repository ppa:neovim-ppa/stable
+  sudo add-apt-repository ppa:neovim-ppa/stable -y
   sudo apt update
   sudo apt install neovim -y
 fi
@@ -49,3 +49,6 @@ echo Installing Coc.nvim
 
 echo Openning neovim
 nvim
+
+echo 'alias v="nvim"' >> ~/.bashrc
+source ~/.bashrc
