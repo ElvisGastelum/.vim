@@ -41,7 +41,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # Neovim 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-echo Openning neovim for install plug-vim
 
 echo '
 " Call the versioned .vimrc file
@@ -63,4 +62,5 @@ fi
 
 echo Install Plugins
 nvim --headless +PlugInstall +qall
+echo Openning neovim to finish the configuration
 nvim
