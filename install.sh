@@ -50,10 +50,6 @@ echo Installing Coc.nvim
 
 echo 'alias v="nvim"' >> ~/.bashrc
 source ~/.bashrc
-if [ -x "$(command -v zsh)" ]; then
-  echo 'alias v="nvim"' >> ~/.zshrc
-  . ~/.zshrc
-fi
 
 echo Install Plugins
 nvim +PlugInstall
