@@ -51,6 +51,7 @@ echo 'alias v="nvim"' >> ~/.bashrc
 source ~/.bashrc
 if [ -x "$(command -v zsh)" ]; then
   echo 'alias v="nvim"' >> ~/.zshrc
+  source ~/.zshrc
 fi
 
 echo Openning neovim
