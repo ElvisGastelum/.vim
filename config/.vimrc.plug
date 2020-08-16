@@ -52,13 +52,12 @@ let g:auto_save_events = ["InsertLeave", "TextChanged"]
 
 " Themes
 Plug 'morhetz/gruvbox'
-
-
 call plug#end()
 
-
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
+if has#colorscheme('gruvbox')
+  colorscheme gruvbox
+  let g:gruvbox_contrast_dark = 'hard'
+endif
 
 let mapleader=' '
 

@@ -4,3 +4,5 @@
 !install.sh
 !coc-install.sh
 !config/*
+!autoload
+!autoload/has.vim
