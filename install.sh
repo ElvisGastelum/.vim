@@ -15,6 +15,7 @@ if [ ! -x "$(command -v nvim)" ]; then
 fi
 
 echo Setting up neovim
+mkdir -p ~/.config/nvim
 echo "
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
@@ -30,6 +31,6 @@ endif
 
 echo Configuration installed
 echo Installing Coc.nvim
-source ~/.vim/coc-install.sh
+. ~/.vim/coc-install.sh
 echo Openning neovim
 nvim
