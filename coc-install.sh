@@ -11,10 +11,6 @@ if [ ! -x "$(command -v node)" ]; then
   # sudo apt-get install nodejs
 fi
 
-mkdir -p ~/.vim/pack/coc/start
-cd ~/.vim/pack/coc/start
-git clone https://github.com/neoclide/coc.nvim.git --depth=1
-
 echo "
 {
   \"languageserver\": {
