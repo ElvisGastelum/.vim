@@ -23,14 +23,27 @@ source ~/.vimrc
 " > ~/.config/nvim/init.vim
 
 
+echo Installing vim-plug for neovim and vim
+# Vim (~/.vim/autoload)
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Neovim (~/.local/share/nvim/site/autoload)
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 echo "\" Call the versioned .vimrc file
 if filereadable(expand(\"~/.vim/config/.vimrc\"))
 	source ~/.vim/config/.vimrc
 endif
 " > ~/.vimrc
 
+echo Install Plugins
+nvim +'PlugInstall --sync' +qa
+
 echo Configuration installed
 echo Installing Coc.nvim
 . ~/.vim/coc-install.sh
+
 echo Openning neovim
 nvim
