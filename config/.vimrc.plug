@@ -15,6 +15,13 @@ Plug 'christoomey/vim-tmux-navigator'
 " TypeScript Syntax Highlighting
 Plug 'HerringtonDarkholme/yats.vim'
 
+" JSX Syntax Highlighting
+" Plug 'yuezk/vim-js'
+" Plug 'maxmellon/vim-jsx-pretty'
+
+" vim-polyglot 
+Plug 'sheerun/vim-polyglot'
+
 " Intellisense for TypeScript
 Plug 'neoclide/coc.nvim'
 
@@ -35,7 +42,6 @@ let g:airline#extensions#tabline#formatter = 'jsformatter'
 " Syntax for javascript projects
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 
