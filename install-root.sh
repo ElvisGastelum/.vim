@@ -10,19 +10,12 @@ git clone https://github.com/ElvisGastelum/.vim ~/.vim
 
 cd ~/.vim
 
-# Install vim
-if [ ! -x "$(command -v vim)" ]; then
-  echo Installing vim
-  apt update
-  apt install vim -y
-fi
-
 # Install neovim
 if [ ! -x "$(command -v nvim)" ]; then
   echo Installing neovim
   add-apt-repository ppa:neovim-ppa/stable -y
-  apt update
-  apt install neovim -y
+  apt-get update
+  apt-get install neovim -y
 fi
 
 echo Setting up neovim
@@ -55,9 +48,9 @@ echo Installing Coc.nvim
 . ~/.vim/coc-install.sh
 
 
-if [ ! -x "$(grep -iRl "alias v" ~/.bashrc)" ]; then
-  echo 'Adding alias v => .bashrc for nvim'
-  echo 'alias v="nvim"' >> ~/.bashrc
+if [ ! -x "$(grep -iRl "alias vim" ~/.bashrc)" ]; then
+  echo 'Adding alias vim => .bashrc for nvim'
+  echo 'alias vim="nvim"' >> ~/.bashrc
   source ~/.bashrc
 fi
 
@@ -65,3 +58,5 @@ echo Install Plugins
 nvim --headless +PlugInstall +qall
 echo Openning neovim to finish the configuration
 nvim
+
+exit 0
