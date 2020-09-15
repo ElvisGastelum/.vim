@@ -5,10 +5,23 @@ set -o errexit    # exit when command fails
 cwd=$(pwd)
 # Install latest lts nodejs
 if [ ! -x "$(command -v node)" ]; then
+  echo 'Installing node latest lts version'
   curl --fail -LSs https://install-node.now.sh/lts | bash -s -- --yes
   export PATH="/usr/local/bin/:$PATH"
   # Or use apt-get
   # sudo apt-get install nodejs
+fi
+
+# Install yarn globally
+if [ ! -x "$(command -v yarn)" ]; then
+  echo 'Installing yarn package manager'
+  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  if [ ! "$(command -v whoami)" = "root"]; then
+    sudo apt-get update && sudo apt-get install yarn -y
+  else
+    apt-get update && apt-get install yarn -y
+  fi
 fi
 
 echo '
