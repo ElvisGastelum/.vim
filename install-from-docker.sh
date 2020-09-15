@@ -56,8 +56,6 @@ echo Installing Coc.nvim
 if [ ! -x "$(grep -iRl "alias vim" ~/.bashrc)" ]; then
   echo 'Adding alias vim => .bashrc for nvim'
   echo 'alias vim="nvim"' >> ~/.bashrc
-  cat ~/.bashrc
-  source ~/.bashrc
 fi
 
 echo Install Plugins
