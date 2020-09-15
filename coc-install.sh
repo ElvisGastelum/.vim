@@ -5,7 +5,7 @@ set -o errexit    # exit when command fails
 cwd=$(pwd)
 # Install latest lts nodejs
 if [ ! -x "$(command -v node)" ]; then
-  curl --fail -LSs https://install-node.now.sh/lts | sh
+  curl --fail -LSs https://install-node.now.sh/lts | bash
   export PATH="/usr/local/bin/:$PATH"
   # Or use apt-get
   # sudo apt-get install nodejs
