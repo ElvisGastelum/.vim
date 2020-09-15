@@ -60,5 +60,6 @@ fi
 
 echo Install Plugins
 nvim --headless +PlugInstall +qall
+nvim --headless +'call coc#util#install()' +qall
 
 exit 0
