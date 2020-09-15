@@ -15,12 +15,7 @@ fi
 # Install yarn globally
 if [ ! -x "$(command -v yarn)" ]; then
   echo 'Installing yarn package manager'
-  
-  if [ "$(whoami)" = "root" ]; then
-    npm install -g yarn
-  else
-    sudo npm install -g yarn
-  fi
+  curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 fi
 
 echo '
