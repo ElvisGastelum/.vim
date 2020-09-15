@@ -17,10 +17,10 @@ if [ ! -x "$(command -v yarn)" ]; then
   echo 'Installing yarn package manager'
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  if [ ! "$(command whoami)" = "root" ]; then
-    sudo apt-get update && sudo apt-get install yarn -y
-  else
+  if [ "$(whoami)" = "root" ]; then
     apt-get update && apt-get install yarn -y
+  else
+    sudo apt-get update && sudo apt-get install yarn -y
   fi
 fi
 
