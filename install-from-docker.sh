@@ -56,7 +56,5 @@ fi
 
 echo Install Plugins
 nvim --headless +PlugInstall +qall
-echo Openning neovim to finish the configuration
-nvim
 
 exit 0
