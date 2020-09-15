@@ -6,6 +6,11 @@
 # * install only for ubuntu/debian
 # * and root user
 
+if [ ! -x "$(command -v git)" ]; then
+  echo Installing git
+  apt-get install git software-properties-common -y
+fi
+
 git clone https://github.com/ElvisGastelum/.vim ~/.vim
 
 cd ~/.vim
