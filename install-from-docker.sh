@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # Simple use command
-#   curl https://raw.githubusercontent.com/ElvisGastelum/.vim/master/install-root.sh | bash
+#   curl https://raw.githubusercontent.com/ElvisGastelum/.vim/master/install-from-docker.sh | bash
 # 
 # * install only for ubuntu/debian
 # * and root user
