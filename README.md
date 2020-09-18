@@ -9,3 +9,9 @@ curl https://raw.githubusercontent.com/ElvisGastelum/.vim/master/install.sh | ba
 ```
 
 \*install only for ubuntu/debian
+
+```bash
+curl https://raw.githubusercontent.com/ElvisGastelum/.vim/master/install.sh | bash
+```
+
+\*install only for docker ubuntu:bionic container
