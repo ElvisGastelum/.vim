@@ -9,14 +9,16 @@ git clone https://github.com/ElvisGastelum/.vim ~/.vim
 
 cd ~/.vim
 
-# Install vim
+# Installing vim
+echo Installing vim
 if [ ! -x "$(command -v vim)" ]; then
   echo Installing vim
   sudo apt update
   sudo apt install vim -y
 fi
 
-# Install neovim
+# Installing neovim
+echo Installing neovim
 if [ ! -x "$(command -v nvim)" ]; then
   echo Installing neovim
   sudo add-apt-repository ppa:neovim-ppa/stable -y
@@ -51,7 +53,7 @@ endif
 
 echo Configuration installed
 echo Installing Coc.nvim
-. ~/.vim/coc-install.sh
+. ~/.vim/scripts/coc/install-coc.sh
 
 
 if [ ! -x "$(grep -iRl "alias v" ~/.bashrc)" ]; then

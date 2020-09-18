@@ -15,7 +15,8 @@ git clone https://github.com/ElvisGastelum/.vim ~/.vim
 
 cd ~/.vim
 
-# Install neovim
+# Installing neovim
+echo Installing neovim
 if [ ! -x "$(command -v nvim)" ]; then
   echo Installing neovim
   add-apt-repository ppa:neovim-ppa/stable -y
@@ -49,10 +50,11 @@ endif
 ' > ~/.vimrc
 
 echo Configuration installed
-echo Installing Coc.nvim
-. ~/.vim/coc-install.sh
+echo Installing Node
+. ~/.vim/scripts/install-node.sh
 
 
+echo Setting alias to .bashrc
 if [ ! -x "$(grep -iRl "alias vim" ~/.bashrc)" ]; then
   echo 'Adding alias vim => .bashrc for nvim'
   echo 'alias vim="nvim"' >> ~/.bashrc
